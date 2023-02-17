@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="flex">
+    <div class="container  flex">
+
+        <h1>BMI Calculator</h1>
+
+        <div class="form">
+
+
+            <label>Weight</label>
+            <div class="contin">
+                <input type="number" id="weightinputkg" placeholder="Enter your weight in kg" min="0">
+                <input type="number" id="weightinputpound" placeholder="Enter your weight in pound" min="0">
+                <select name="weight" id="weight">
+                    <option value="kg">kg</option>
+                    <option value="pound">pound</option>
+                </select>
+            </div>
+
+
+            <label>Height</label>
+            <div class="contin">
+                <input type="number" id="heightinputmt" placeholder="Enter your height in metres" min="0">
+
+                <input type="number" id="heightinputcm" placeholder="Enter your height in centimetres" min="0">
+
+                <input type="number" id="heightinputfeet" placeholder=" feet" min="0">
+                <input type="number" id="heightinputinc" placeholder="inches" min="0">
+
+                <select name="height" id="height">
+                    <option value="metre">metre</option>
+                    <option value="centimetre">centimetre</option>
+                    <option value="feet">feet</option>
+
+                </select>
+            </div>
+
+
+            <button onclick="calculate()">Calculate</button>
+
+        </div>
+        <div class="result">
+            <h2>Your BMI is : </h2>
+            <p class="status">
+                You need to -
+            </p>
+            <div class="measurements">
+                <p>Underweight = &gt;18.5</p>
+                <p>Normal Weight = 18.5 - 24.9</p>
+                <p>Overweight = 25 - 29.9</p>
+                <p>Obesity = BMI of 30 or greater</p>
+            </div>
+            <button onclick="window.location.reload()">Try Again</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
